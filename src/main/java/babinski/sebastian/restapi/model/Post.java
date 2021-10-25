@@ -3,10 +3,7 @@ package babinski.sebastian.restapi.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -16,12 +13,13 @@ import java.util.List;
 public class Post {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String title;
     private String content;
     private LocalDateTime created;
-    @OneToMany
-    @JoinColumn(name = "postId")
+    @OneToMany(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "postId", updatable = false, insertable = false)
     private List<Comment> comment;
 
 }
