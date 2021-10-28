@@ -28,8 +28,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
 	// dependency to handle json web tokens
 	implementation 'com.auth0:java-jwt:3.8.3'
+
+	implementation 'org.ehcache:ehcache:3.8.1'
+	implementation 'javax.cache:cache-api:1.1.1'
 
 	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
 	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2' // 2.9.2
