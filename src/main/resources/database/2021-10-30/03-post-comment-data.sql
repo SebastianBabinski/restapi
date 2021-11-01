@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset sbabinski:1
+--changeset sbabinski:3
 insert into post(id, title, content, created) values (1, 'Test post 1', 'Content 1', '2021-07-14T02:59:47.424020300');
 insert into post(id, title, content, created) values (2, 'Test post 2', 'Content 2', '2021-07-15T02:59:47.425021100');
 insert into post(id, title, content, created) values (3, 'Test post 3', 'Content 3', '2021-07-16T02:59:47.425021100');
